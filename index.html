@@ -1,1 +1,73 @@
-Hello world!
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>1</title>
+    <meta http-equiv="imagetoolbar" content="no">
+    <style type="text/css">
+        
+    </style>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="Picbox-2.2/source/jquery.rotate.js" type="text/javascript"></script>
+    <script src="Picbox-2.2/source/picbox.js" type="text/javascript"></script>
+    <link href="Picbox-2.2/css/picbox.css" rel="stylesheet" type="text/css" />
+    <link href="imageflow.css" rel="stylesheet" type="text/css" />
+    <script src="Picbox-2.2/source/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="imageflow.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        imf.create("imageFlow", 0.25, 1.5, 10);
+    </script>
+</head>
+<body>
+<div style="width:600px;height:400px">
+    <div id="imageFlow">
+        <div class="top"></div>
+        <div class="bank">
+            <a rel="jpg/1.jpg" title="胡画"></a>
+            <a rel="jpg/2.jpg" title="野外"></a>-->
+            <a rel="jpg/3.jpg" title="绿叶"></a>
+            <a rel="jpg/4.jpg" title="水草"></a>
+            <a rel="jpg/5.jpg" title="田间"></a>
+            <a rel="jpg/6.jpg" title="雪or冰"></a>
+            <a rel="jpg/7.jpg" title="豹子"></a>
+            <a rel="jpg/8.jpg" title="花纹"></a>
+            <a rel="jpg/9.jpg" title="古树"></a>
+            <a rel="jpg/10.jpg" title="山巅"></a>
+            <a rel="jpg/11.jpg" title="抽象"></a>
+            <a rel="jpg/12.jpg" title="崇山峻岭"></a>
+            <a rel="jpg/13.jpg" title="雪豹"></a>
+            <!-- <a rel="jpg/14.jpg" title="不知道"></a>
+            <a rel="jpg/15.jpg" title="眩光"></a>
+            <a rel="jpg/17.jpg" title="彩光"></a>
+            <a rel="jpg/18.jpg" title="还是彩光"></a>
+            <a rel="jpg/Expose.jpg" title="apple"></a>
+            <a rel="jpg/NB.jpg" title="PVsZ"></a>
+            <a rel="jpg/PS.jpg" title="PVsZ2"></a>-->
+        </div>
+        <div class="text">
+            <div class="title">Loading</div>
+            <div class="legend">Please wait...</div>
+        </div>
+        <div class="scrollbar">
+            <img class="track" src="jpg/sb.gif" alt="">
+            <img class="arrow-left" src="jpg/sl.gif" alt="">
+            <img class="arrow-right" src="jpg/sr.gif" alt="">
+            <img class="bar" src="jpg/sc.gif" alt="">
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function ObjectToString(ob) {
+        var s = "";
+        for (var i in ob) {
+            s += i + " : " + ob[i] + "\n";
+        }
+        return s;
+    }
+    //$(function ($) {
+    //    alert(ObjectToString($("img[rel^='lightbox']")));
+    //    $("img[rel^='lightbox']").picbox({/* Put custom options here */ }, null, false);
+    //});
+</script>
+
+</html>

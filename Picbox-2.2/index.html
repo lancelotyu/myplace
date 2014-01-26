@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" src="../Plugin/Picbox-2.2/source/jquery.rotate.js"></script>
+	<!-- <script type="text/javascript" src="source/autoload.js"></script> -->
+	<script type="text/javascript" src="../Plugin/Picbox-2.2/source/picbox.js"></script>
+	<script type="text/javascript" src="../Plugin/Picbox-2.2/source/jquery.mousewheel.js"></script>
+	
+	<link rel="stylesheet" href="../Plugin/Picbox-2.2/css/picbox.css" type="text/css" media="screen" />
+
+	<style type="text/css">
+	    body
+	    {
+	        background-color: #fff;
+	        font-family: arial, helvetica, sans-serif;
+	        color: #000;
+	    }
+
+	    h1, p
+	    {
+	        text-align: center;
+	    }
+
+	    p
+	    {
+	        margin-top: 100px;
+	    }
+
+	    a
+	    {
+	        font-weight: bold;
+	        color: #f00;
+	    }
+	</style>
+</head>
+<body>
+	<h1>Picbox example page</h1>
+	<p>
+		<img src="../Plugin/Picbox-2.2/example.jpg" rel="lightbox" title="双击显示全尺寸">点击</img> 打开图片
+		<!--<a href="../Plugin/Picbox-2.2/1.jpg" rel="lightbox" title="阿斯顿发生大发斯蒂芬">1</a> 
+		<a href="../Plugin/Picbox-2.2/2.jpg" rel="lightbox" title="图片是xxx">2</a> 
+		<a href="../Plugin/Picbox-2.2/3.jpg" rel="lightbox" title="王企鹅特务颜体">3</a> -->
+	</p>
+</body>
+<script>
+    $(function ($) {
+        $("img[rel^='lightbox']").picbox({/* Put custom options here */ }, null, function (el) {
+            return (this == el) || ((this.rel.length > 8) && (this.rel == el.rel));
+        });
+    });
+    $(function ($) {
+        //alert(ObjectToString($("a[rel^='lightbox']")));
+        $.picbox([["../../Plugin/Picbox-2.2/example.jpg", "tttt"], ["../Plugin/Picbox-2.2/1.jpg", "tttt"], ["../Plugin/Picbox-2.2/2.jpg", "tttt"], ["../Plugin/Picbox-2.2/3.jpg", "tttt"]], 0, {loop:true})
+    });
+</script>
+</html>
